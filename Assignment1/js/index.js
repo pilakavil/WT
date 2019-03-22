@@ -38,7 +38,7 @@ function xmlFunction(xml)
         }
     }
     if(flag==1)
-        window.location="/home.html";
+        window.location="./home.html";
     else
     {
         document.write("<a href=\"/login.html\">Login Again</a> Username/password wrong")
