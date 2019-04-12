@@ -1,57 +1,37 @@
 <?php
-$xmldoc = new DomDocument('1.0');
-$xmldoc->preserveWhiteSpace = false;
-$xmldoc->formatOutput       = true;
 
-$name   = $_POST['username'];
-$pass   = $_POST['password'];
-$mobile = $_POST['mobile'];
-$email  = $_POST['email'];
-$age    = $_POST['age'];
+	$firstname 	= $_POST['firstname'];
+	$lastname  	= $_POST['lastname'];
+	$emailid 	= $_POST['emailid'];
+	$username  	= $_POST['username'];
+	$password  	= $_POST['password'];
 
-if($xml = file_get_contents('database.xml'))
-{
-    $xmldoc->loadXML($xml,LIBXL_NOBLANKS);
-    
-    $root = $xmldoc->getElementsByTagName('profile')->item(0);
-    
-    $account = $xmldoc->createElement('account');
-    
-    $root->insertBefore($account,$root->lastChild);
-    
-    $nameElement = $xmldoc->createElement('name');
-    $account->appendChild($nameElement);
-    $nameText = $xmldoc->createTextNode($name);
-    $nameElement->appendChild($nameText);
-    
-    $passElement = $xmldoc->createElement('pass');
-    $account->appendChild($passElement);
-    $passText = $xmldoc->createTextNode($pass);
-    $passElement->appendChild($passText);
-    
-    $emailElement = $xmldoc->createElement('email');
-    $account->appendChild($emailElement);
-    $emailText = $xmldoc->createTextNode($email);
-    $emailElement->appendChild($emailText);
-    
-    $mobileElement = $xmldoc->createElement('mobile');
-    $account->appendChild($mobileElement);
-    $mobileText = $xmldoc->createTextNode($mobile);
-    $mobileElement->appendChild($mobileText);
-    
-    $ageElement = $xmldoc->createElement('age');
-    $account->appendChild($ageElement);
-    $ageText = $xmldoc->createTextNode($age);
-    $ageElement->appendChild($ageText);
-    
-    $xmldoc->save('database.xml');
-}
+	$xml = simplexml_load_file('database.xml');
+
+
+	$account = $xml->profile->addChild('account');
+	$firstname = $account->addChild('firstname',$firstname);
+	$lastname = $account->addChild('lastname',$lastname);
+	$emailid = $account->addChild('emailid',$emailid);
+	$username = $account->addChild('username',$username);
+	$password = $account->addChild('password',$password);
+	$xml->asXML('database.xml');
+
 ?>
+
 <html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h2 style="color: white">Successfully Registered. <a href="index.html"> Login Page</a></h2>
-    </body>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		h2{
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);	
+		}
+	</style>
+</head>
+<body>
+<h2>Registred Successfully <a href="login">Login</a></h2>
+</body>
 </html>

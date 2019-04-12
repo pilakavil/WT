@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(to bottom right, aqua, aquamarine);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	font-family: Raleway;
+	font-size: 20px;
+	text-align: center;
+}
+
+.login, .register{
+	z-index: 1;
+	background: azure;
+	box-shadow: 10px 10px 40px;
+	padding: 5%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input#username,input#password,input#button,input#firstname,input#lastname,input#emailid{
+    margin-bottom: 10%;
+	border-style: solid;
+	padding: 3%;
+	font-size: 20px;
+	border-radius: 10px;	
+}
+
+input::placeholder{
+	letter-spacing: 1px;
+	text-align: center;
+	font-family: Raleway;
+}
+
+input#button{
+	font-weight: 700;
+    width: 50%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background: darkblue;
+	letter-spacing: 1px;
+    color: white;
+	border-radius:100px;
+    border-style: none;
+}
+input#button:hover{
+	background: mediumblue;
+}
+
+.message a{
+	text-decoration: none;
+}
