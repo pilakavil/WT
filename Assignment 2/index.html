@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login/Signup</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form class="login" action="checklogin.php" method="post">
+        <input type="text" id="logUsername" name="logUsername" placeholder="Username" required> <br>
+        <input type="password" id="logPassword" name="logPassword" placeholder="Password" required> <br>
+        <input type="submit" id="logButton" value="LOGIN">
+        <input type="button" id="regButton" value="SIGN UP" onclick="toggle('register')">
+    </form>
+    
+    <form id="register" class="register" action="addentry.php" method="post">
+        <input type="text" id="regUsername" name="regUsername" placeholder="Username" required> <br>
+        <input type="password" id="regPassword" name="regPassword" placeholder="Password" required> <br>
+        <input type="email" id="regEmail" name="regEmail" placeholder="Email Address" required> <br>
+        <input type="tel" id="regPhone" name="regPhone" placeholder="Mobile Number" pattern="[0-9]{10}" required> <br>
+        <input type="submit" id="logButton" value="SIGN UP">
+        <input type="button" id="regButton" value="LOGIN" onclick="toggle('register')">
+    </form>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

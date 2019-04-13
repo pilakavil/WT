@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Raleway;
+    font-size: 20px;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, darkblue, darkslateblue);
+    background-repeat: no-repeat;
+}
+
+.login, .register{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: lavender;
+    padding: 5%;
+    border-radius: 100px;
+    box-shadow: 10px 10px 50px;
+}
+
+.register {
+    visibility: hidden;
+}
+
+input#logUsername, input#logPassword, input#regUsername, input#regPassword, input#regEmail, input#regPhone {
+    margin-bottom: 10%;
+    padding: 3%;
+    font-size: 20px;
+    border-left-style: none;
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-right-style: none;
+    background: lavender;
+}
+
+input::placeholder {
+    color: darkblue;
+    font-family: Raleway;
+    letter-spacing: 1.5px;
+    background: lavender;
+}
+
+input#logButton, input#regButton {
+    width: 45%;
+    padding: 6%;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+}
+
+input#logButton {
+    margin-right: 3%;
+    background-image: linear-gradient(to bottom right, violet, darkviolet);
+    background-repeat: no-repeat;
+
+}
+
+input#regButton {
+    margin-left: 3%;
+    background-image: linear-gradient(to bottom right, indigo, purple);
+    background-repeat: no-repeat;
+
+}
