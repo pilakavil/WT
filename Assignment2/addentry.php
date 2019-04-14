@@ -16,5 +16,6 @@
 
     $msg = "Registration Successful";
     $url = "index.html";
-    echo "<script type='text/javascript'>alert('$msg'); location = '$url';</script>";
+    $option = "_self";
+    echo "<script type='text/javascript'>alert('$msg'); open('$url','$option');</script>";
 ?>

@@ -68,3 +68,61 @@ input#regButton {
     background-repeat: no-repeat;
 
 }
+
+body {
+    margin: 0;
+}
+header {
+    margin: 0;
+    overflow: hidden;
+    background: white;
+    box-shadow: 10px 10px 40px;
+}
+header a {
+    padding: 1%;
+    float: left;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+header a#logo {
+    background-image: linear-gradient(to bottom right, violet, darkviolet);
+    background-repeat: no-repeat;
+    right: 1%;
+    letter-spacing: 5px;
+    font-size: 30px;
+    color: white;
+}
+header a:hover {
+    color: purple;
+}
+header a#act {
+    color: purple;
+}
+
+table {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 10px 10px 40px;
+}
+table td, table th {
+  border: 1px solid black;
+  padding: 12px;
+}
+table th {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+  background: indigo;
+  color: white;
+}
+footer {
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    color: white;
+}
