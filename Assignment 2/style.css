@@ -16,8 +16,8 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: lavender;
     padding: 5%;
+    background: white;
     border-radius: 100px;
     box-shadow: 10px 10px 50px;
 }
@@ -28,20 +28,20 @@ html {
 
 input#logUsername, input#logPassword, input#regUsername, input#regPassword, input#regEmail, input#regPhone {
     margin-bottom: 10%;
-    padding: 3%;
+    padding: 5%;
     font-size: 20px;
-    border-left-style: none;
-    border-bottom-style: solid;
     border-top-style: none;
     border-right-style: none;
-    background: lavender;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-bottom-color: darkviolet;
+    
 }
 
 input::placeholder {
     color: darkblue;
     font-family: Raleway;
     letter-spacing: 1.5px;
-    background: lavender;
 }
 
 input#logButton, input#regButton {
