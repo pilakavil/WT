@@ -10,13 +10,11 @@
     }
     if ($flag == 1) {
         $url = "home.html";
-        $option = "_self";
-        echo "<script type='text/javascript'>open('$url','$option');</script>";   
+        echo "<script type='text/javascript'>location = '$url';</script>";   
     }
     else {
         $msg = "Username/Password Wrong";
         $url = "index.html";
-        $option = "_self";
-        echo "<script type='text/javascript'>alert('$msg'); open('$url','$option');</script>";
+        echo "<script type='text/javascript'>alert('$msg'); location = '$url';</script>";
     }
 ?>
